@@ -6,6 +6,7 @@ public class Crop {
 
     Crop(String name) {
         this.name = name;
+        photoId = -1;
     }
 
     Crop(String name, int photoId) {

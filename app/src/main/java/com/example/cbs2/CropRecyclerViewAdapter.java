@@ -56,14 +56,14 @@ public class CropRecyclerViewAdapter extends RecyclerView.Adapter<CropRecyclerVi
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int index){
 //        TODO correct this image
-        myViewHolder.cropPhotoImageView.setImageBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.wheat));
+        if(presentCrops[index].getPhotoId() != -1)
+            myViewHolder.cropPhotoImageView.setImageBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.wheat));
         myViewHolder.cropNameTextView.setText(presentCrops[index].getName());
     }
 
     @Override
     public int getItemCount() {
         return presentCrops.length;
-
     }
 
 }

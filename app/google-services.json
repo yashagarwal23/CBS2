@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "320163692154",
+    "firebase_url": "https://cbs-project-2.firebaseio.com",
+    "project_id": "cbs-project-2",
+    "storage_bucket": "cbs-project-2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:320163692154:android:e0eaa0577038beb8",
+        "android_client_info": {
+          "package_name": "com.example.cbs2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "320163692154-71bpp7g41lugbutjdobmue2l1vn9jako.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cbs2",
+            "certificate_hash": "ef270efe0788a7433453f079d8e48fa8f24a0261"
+          }
+        },
+        {
+          "client_id": "320163692154-2cp5ltgha3c7njhkh2n70bdd6euq8n1m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC914tp_4q2OnJpFDm4ib4p9hlXs5cucT8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "320163692154-2cp5ltgha3c7njhkh2n70bdd6euq8n1m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

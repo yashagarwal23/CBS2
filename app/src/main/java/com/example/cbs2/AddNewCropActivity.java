@@ -22,7 +22,8 @@ public class AddNewCropActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        Crop[] availableCrops = {new Crop(getString(R.string.tomato))};
+        Crop[] availableCrops;
+        availableCrops = Utils.getAvailableCrops(this);
         adapter = new CropRecyclerViewAdapter(availableCrops, AddNewCropActivity.this);
         recyclerView.setAdapter(adapter);
 
