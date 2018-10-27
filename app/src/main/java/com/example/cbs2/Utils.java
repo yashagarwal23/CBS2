@@ -39,17 +39,20 @@ public class Utils {
 //            }
 //        } else {
 //            final FirebaseDatabase database = FirebaseDatabase.getInstance();
-//            DatabaseReference ref = database.getReference("available crops");
+//            DatabaseReference ref = database.getReference().child("available crops");
 //            ref.addChildEventListener(new ChildEventListener() {
 //                @Override
 //                public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
 //                    String temp = dataSnapshot.getValue(String.class);
+//                    System.out.println("jvdbjdb" + temp);
 //                    result.add(new Crop(temp));
 //                }
 //
 //                @Override
 //                public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-//
+//                    String temp = dataSnapshot.getValue(String.class);
+//                    System.out.println("bdbzb" + temp);
+//                    result.add(new Crop(temp));
 //                }
 //
 //                @Override
@@ -72,5 +75,10 @@ public class Utils {
 //        for(int i = 0; i < result.size(); i++)
 //            ans[i] = result.get(i);
 //        return ans;
+    }
+
+    public class FirebaseData {
+        int index;
+        String str;
     }
 }

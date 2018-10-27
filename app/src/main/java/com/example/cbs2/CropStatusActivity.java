@@ -17,8 +17,6 @@ public class CropStatusActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crop_status);
-
-
     }
 
     @Override
@@ -46,6 +44,7 @@ public class CropStatusActivity extends AppCompatActivity {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
+            Intent intent = new Intent(CropStatusActivity.this,CropCheckStatusResult.class);
         }
     }
 }
