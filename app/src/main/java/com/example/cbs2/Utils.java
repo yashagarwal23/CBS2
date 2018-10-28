@@ -22,11 +22,42 @@ public class Utils {
 
     public static Crop[] getAvailableCrops(Context context) {
 
-        Crop[] sr = new Crop[2];
-        sr[0] = new Crop("tomato");
-        sr[1] = new Crop("maize");
-        return sr;
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
+            DatabaseReference ref = database.getReference().child("available crops");
+            ref.addChildEventListener(new ChildEventListener() {
+                @Override
+                public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                    System.out.println("Class : " + dataSnapshot.getValue().getClass());
+                    result.add(dataSnapshot.getValue(Crop.class));
+                }
 
+                @Override
+                public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+                }
+
+                @Override
+                public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
+
+                }
+
+                @Override
+                public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+
+
+//        Crop[] sr = new Crop[2];
+//        sr[0] = new Crop("tomato");
+//        sr[1] = new Crop("maize");
+////        return sr;
+//
 //        SharedPreferences prefs = context.getSharedPreferences("general_settings", Context.MODE_PRIVATE);
 //        if(prefs.contains("available crops")) {
 //            try {
@@ -50,9 +81,7 @@ public class Utils {
 //
 //                @Override
 //                public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-//                    String temp = dataSnapshot.getValue(String.class);
-//                    System.out.println("bdbzb" + temp);
-//                    result.add(new Crop(temp));
+//
 //                }
 //
 //                @Override
@@ -71,10 +100,13 @@ public class Utils {
 //                }
 //            });
 //        }
-//        Crop[] ans = new Crop[result.size()];
-//        for(int i = 0; i < result.size(); i++)
-//            ans[i] = result.get(i);
-//        return ans;
+        System.out.println("jbsnjnvsjvbjsnvjsnb");
+        Crop[] ans = new Crop[result.size()];
+        for(int i = 0; i < result.size(); i++) {
+            ans[i] = result.get(i);
+            System.out.println("vbhbvhsbv" + ans[i].getName());
+        }
+        return ans;
     }
 
     public class FirebaseData {

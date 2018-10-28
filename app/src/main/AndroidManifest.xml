@@ -32,7 +32,8 @@
             android:label="Add a new crop"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".CropCheckStatusResult"></activity>
+        <activity android:name=".CropCheckStatusResult"
+            android:parentActivityName=".CropStatusActivity"></activity>
     </application>
 
 </manifest>

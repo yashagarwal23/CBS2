@@ -44,7 +44,10 @@ public class CropStatusActivity extends AppCompatActivity {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
+//            TODO insert chaba's model and send the result of the label
             Intent intent = new Intent(CropStatusActivity.this,CropCheckStatusResult.class);
+            intent.putExtra("image",imageBitmap);
+            startActivity(intent);
         }
     }
 }

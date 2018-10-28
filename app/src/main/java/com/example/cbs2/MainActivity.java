@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity
         recyclerView.setLayoutManager(layoutManager);
 
 //        TODO get crops from database
-        Crop presentCrops[] = {new Crop("Maize",R.drawable.maize)};
+        Crop presentCrops[] = {new Crop("maize",R.drawable.maize)};
         adapter = new CropRecyclerViewAdapter(presentCrops, MainActivity.this);
         recyclerView.setAdapter(adapter);
     }
